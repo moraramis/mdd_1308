@@ -6,4 +6,4 @@ If the fonts aren't installed the fonts will just proceed to the defaults I've s
 My SQL Dump should be in my assets folder also. 
 
 Username: root
-there is no password. 
+Password: there is no password.
