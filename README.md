@@ -4,3 +4,6 @@ The fonts for this turn are included in the Assets folder along with my Style Gu
 If the fonts aren't installed the fonts will just proceed to the defaults I've set in the CSS. 
 
 My SQL Dump should be in my assets folder also. 
+
+Username: root
+there is no password. 
