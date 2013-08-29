@@ -1,5 +1,5 @@
 <?php
-
+    //My userView that will include all the include pages i have. 
 class userView {
 
     public function showHeader($pageTitle = '') {

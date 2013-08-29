@@ -7,7 +7,7 @@ class authView {
         }
     }
 }
-
+        //My Secure Session Start 
 function sec_session_start() {
         $session_name = 'sec_session_id'; // Set a custom session name
         $secure = false; 

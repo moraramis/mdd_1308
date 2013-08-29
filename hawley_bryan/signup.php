@@ -1,12 +1,20 @@
-<?php
+<style>
 
+form {
+    margin: 0 auto;
+}
+
+</style>
+
+<?php
+//bringing in my required pages 
 require_once('db.php');
 require_once('views/authView.php');
 require_once('model/authModel.php');
 
 $view = new AuthView();
 $view->show('header');
-
+echo('<br /><a href="index.php" class="small button">Back</a>');
 $fields = array(
     'userName'=>'User Name',
     'firstName'=>'First Name',
@@ -14,12 +22,12 @@ $fields = array(
     'email'=>'Email',
     'homeZipcode'=>'Zip Code',
 );
-
+//setting up my if else conditionals that will post entered passwords into the db, or throw an error if the fields are blank
 if(isset($_POST['submit'])){
 
     $values = array();
-    $userPassword1 = MD5($_POST["userSalt, userPassword1"]);
-    $userPassword2 = MD5($_POST["userSalt, userPassword2"]);
+    $userPassword1 = MD5($_POST["userPassword1"]);
+    $userPassword2 = MD5($_POST["userPassword2"]);
 
     if($userPassword1 == '' || $userPassword2 == ''){
         echo "You forgot to enter a password.";
@@ -93,5 +101,6 @@ if(isset($result)){
     <input name="userPassword1" type="password"></p>
     <p> <label for="userPassword2">Re-Type your password</label>
     <input name="userPassword2" type="password"></p>
+    <p>By Clicking Submit You Agree to Our <a href="tos_page.php">Terms of Service</a></p>
     <input class="button success"type="submit" name="submit" value="Sign Up!" />
 </form>

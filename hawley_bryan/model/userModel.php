@@ -2,7 +2,7 @@
 
 class userModel {
     private $db;
-
+    //Similar to my authModel, but instead of handeling user authentication this one handles user info
     public function __construct($dsn, $user, $pass){
         try{
             $this->db = new \PDO($dsn, $user, $pass);
@@ -11,7 +11,7 @@ class userModel {
             var_dump($e);
         }
     }
-
+        //queries the database
     public function getinfo(){
         $statement = $this->db->prepare("
         SELECT userId, homeZipcode
@@ -30,7 +30,7 @@ class userModel {
         }
         return array();
     }
-
+        //queries the database for their zipcode
     public function getLocationDetails($id){
         $statement = $this->db->prepare("
         SELECT zipcode, state, city, latitude, longitude
