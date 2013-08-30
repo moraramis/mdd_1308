@@ -15,7 +15,7 @@ require_once "views/authView.php";
 
 //My Navigation buttons that only show up if the user is logged in
 if (isset($_SESSION['userInfo'])){
-    echo '<ul><li><a href="hotspots.php" class="small button">Hot Spots</a></li>', '<li><a href="logout.php" class="small button">Logout</a></li></ul>';
+    echo '<ul><li><a href="hotspots.php" class="small button">Hot Spots</a></li>', '<li><a href="profile_signup.php" class="small button">Profile</a></li>', '<li><a href="logout.php" class="small button">Logout</a></li></ul>';
 }
 ?>
 </body>
